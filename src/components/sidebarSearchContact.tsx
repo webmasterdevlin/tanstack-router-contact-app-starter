@@ -9,7 +9,7 @@ type Props = {
 export default function SidebarSearchContact() {
   const handleOnChangeEvent = async (e: FormEvent<HTMLInputElement>) => {};
 
-  const action = async (e: FormEvent<HTMLFormElement>) => {
+  const handleOnSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     await createContact();
   };
@@ -28,7 +28,7 @@ export default function SidebarSearchContact() {
         <div id="search-spinner" hidden={true} aria-hidden />
         <div className="sr-only" aria-live="polite"></div>
       </form>
-      <form onSubmit={action}>
+      <form onSubmit={handleOnSubmit}>
         <button type="submit">New</button>
       </form>
     </div>
