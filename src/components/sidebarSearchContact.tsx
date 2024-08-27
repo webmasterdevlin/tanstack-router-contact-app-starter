@@ -1,21 +1,17 @@
 import { FormEvent } from 'react';
-import { createContact } from '../services/contacts';
+import { createContact } from '../services/contacts.ts';
 
 type Props = {
   query: string;
   setQuery: (query: string) => void;
 };
 
-export default function SidebarSearchContact({ query, setQuery }: Props) {
-  const router: any = {};
-
-  const handleOnChangeEvent = async (e: FormEvent<HTMLInputElement>) => {
-    setQuery(e.currentTarget.value);
-  };
+export default function SidebarSearchContact() {
+  const handleOnChangeEvent = async (e: FormEvent<HTMLInputElement>) => {};
 
   const action = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const contact = await createContact();
+    await createContact();
   };
 
   return (
@@ -23,15 +19,13 @@ export default function SidebarSearchContact({ query, setQuery }: Props) {
       <form id="search-form" role="search">
         <input
           id="q"
-          className={router.state.isLoading ? 'loading' : ''}
           aria-label="Search contacts"
           placeholder="Search"
           type="search"
           name="q"
-          value={query}
           onChange={handleOnChangeEvent}
         />
-        <div id="search-spinner" hidden={!router.state.isLoading} aria-hidden />
+        <div id="search-spinner" hidden={true} aria-hidden />
         <div className="sr-only" aria-live="polite"></div>
       </form>
       <form onSubmit={action}>
