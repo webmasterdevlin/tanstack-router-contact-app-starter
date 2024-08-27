@@ -1,5 +1,5 @@
+import { FormEvent } from 'react';
 import { Contact } from '../models.ts';
-import React from 'react';
 import { updateContact } from '../services/contacts.ts';
 
 type FavoriteProps = {
@@ -11,7 +11,7 @@ const Favorite = ({ contact }: FavoriteProps) => {
 
   return (
     <form
-      onSubmit={async (e: React.FormEvent<HTMLFormElement>) => {
+      onSubmit={async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         await updateContact(contact.id, {
           ...contact,
