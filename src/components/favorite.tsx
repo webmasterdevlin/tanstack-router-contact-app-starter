@@ -1,7 +1,6 @@
 import { Contact } from '../models.ts';
 import React from 'react';
 import { updateContact } from '../services/contacts.ts';
-import { useRouter } from '@tanstack/react-router';
 
 type FavoriteProps = {
   contact: Contact;
@@ -9,7 +8,6 @@ type FavoriteProps = {
 
 const Favorite = ({ contact }: FavoriteProps) => {
   let favorite = contact['favorite'];
-  const router = useRouter();
 
   return (
     <form
@@ -19,7 +17,6 @@ const Favorite = ({ contact }: FavoriteProps) => {
           ...contact,
           favorite: !contact.favorite,
         });
-        await router.invalidate();
       }}
     >
       <button
