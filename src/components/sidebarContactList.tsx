@@ -1,10 +1,5 @@
-import { Contact } from '../models.ts';
-
-type Props = {
-  contacts: Contact[];
-};
-
-export default function SidebarContactList({ contacts }: Props) {
+export default function SidebarContactList() {
+  const contacts: any[] = []; // placeholder
   return (
     <nav>
       {contacts.length ? (

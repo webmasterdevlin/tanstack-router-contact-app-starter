@@ -1,7 +1,7 @@
 import { FormEvent } from 'react';
 
 export default function EditContactForm() {
-  const contact: any = {};
+  const contact: any = {}; // placeholder
 
   const handleOnSubmit = async (event: FormEvent) => {
     event.preventDefault();

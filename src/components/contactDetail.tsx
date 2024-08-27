@@ -3,8 +3,8 @@ import { deleteContact } from '../services/contacts.ts';
 import Favorite from './Favorite.tsx';
 
 export default function ContactDetail() {
-  const contact: any = {};
-  const params: any = {};
+  const contact: any = {}; // placeholder
+  const params: any = {}; // placeholder
 
   const handleEditEvent = async (event: FormEvent) => {
     event.preventDefault();
