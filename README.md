@@ -1,6 +1,11 @@
-# Steps in building the project from the starter repo
+# TanStack Router Tutorial
+- This is originated in [React Router Tutorial](https://reactrouter.com/en/main/start/tutorial)
+- data is saved in [indexedDB](https://dev.to/armstrong2035/9-differences-between-indexeddb-and-localstorage-30ai) in the browser.
+- you can use any package manager you like
 
-## Setting up the routes
+## Steps in building the project from the starter repo
+
+### Setting up the routes
 
 - [x] download the starter repo
 - [x] npm install
@@ -51,7 +56,7 @@ npm run dev
 ```
 - [x] see the changes in the browser
 
-## Adding the TanStack Router Devtools
+### Adding the TanStack Router Devtools
 
 - [x] update the `__root.tsx` file to add the `TanStackRouterDevtools` component.
 ```tsx
@@ -80,7 +85,7 @@ const TanStackRouterDevtools =
 ```
 - [x] see the changes in the browser
 
-## Adding New Contact functionality
+### Adding New Contact functionality
 
 - [x] update the `__root.tsx` file to add sidebar and the list of contacts.
 ```tsx
@@ -105,7 +110,7 @@ const TanStackRouterDevtools =
 - [x] go the web app and click the `New` button that will trigger the `createContact` function.
 - [x] confirm that the new contact is added to the indexedDB
 
-## Showing the list of contacts
+### Showing the list of contacts
 
 - [x] update the `RootRouteOptions` of the `__root.tsx` file.
 ```tsx
@@ -137,7 +142,7 @@ const { contacts } = Route.useLoaderData();
 ```
 - [x] see the changes in the browser. It should now show the list of contacts with one object (no name).
 
-## Creating a navigation functionality
+### Creating a navigation functionality
 - [x] create a new page named `contacts.$contactId.index.tsx` inside the `routes` folder then save the file to reload your IDE.
 - [x] check the `routeTree.gen.ts` file. It should have the new route.
 - [x] change the `ahref tag` to use the `Link` component from TanStack Router.
@@ -151,7 +156,7 @@ const { contacts } = Route.useLoaderData();
 ```
 - [x] go to the browser and click on the contact. It should navigate to the empty contact detail page.
 
-## Adding the Contact Detail functionality
+### Adding the Contact Detail functionality
 
 - [x] update the `contacts.$contactId.index.tsx` file to show the contact details.
 ```tsx
@@ -203,7 +208,7 @@ function ContactIdIndexComponent() {
 const contact = Route.useLoaderData();
 ```
 
-## Adding delete functionality
+### Adding delete functionality
 
 - [x] replace the params placeholder with this:
 ```tsx
@@ -228,7 +233,7 @@ const navigate = Route.useNavigate();
 - [x] go to the browser and click on the delete button. It should delete the contact and navigate to the home page.
 - [x] add more contacts and delete them to see the changes in the browser.
 
-## Adding the Edit functionality
+### Adding the Edit functionality
 - [x] create a new page named `contacts.$contactId.edit.tsx` inside the `routes` folder then save the file to reload your IDE.
 - [x] update the `contacts.$contactId.edit.tsx` file to fetch the contact details.
 ```tsx
@@ -279,7 +284,7 @@ function EditContactComponent() {
 - [x] Go the browser and click a **no name** contact. Add a `/edit` to the url and see the edit form.
 - [x] Try to update the details of the contact and see the changes in the browser.
 
-## Adding navigation going to the edit form of the contact
+### Adding navigation going to the edit form of the contact
 
 - [x] go back to the `ContactDetail.tsx` file and update the `handleEditEvent` function with this:
 ```tsx
@@ -309,7 +314,7 @@ const contact = await createContact();
 ```
 - [x] go to the browser and click the **New** button. It should navigate to the edit form of the new contact.
 
-## Adding search functionality
+### Adding search functionality
 
 - [x] go to the `__root.tsx` file and the hooks:
 ```tsx
@@ -357,7 +362,7 @@ hidden={!router.state.isLoading}
 ```
 - [x] go to the browser and type a name in the search bar. It should show the loading spinner and the list of contacts.
 
-## Adding the star functionality
+### Adding the star functionality
 - [x] go to the `Favorite.tsx` file and add the `useRouter` hook.
 ```tsx
 const router = useRouter();
@@ -367,8 +372,8 @@ const router = useRouter();
 await router.invalidate();
 ```
 
-## End of the TanStack Router Tutorial
+### End of the TanStack Router Tutorial
 
 - Thank you for following the steps. You can now explore more of the TanStack Router features and functionalities.
-- [x] You can also check the [TanStack Router documentation](https://tanstack.com/router/latest) for more information.
-- [x] Happy coding! 🚀
+- You can also check the [TanStack Router documentation](https://tanstack.com/router/latest) for more information.
+- Happy coding! 🚀
