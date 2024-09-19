@@ -1,6 +1,6 @@
 import { FormEvent } from 'react';
-import { Contact } from '../models.ts';
-import { updateContact } from '../services/contacts.ts';
+import { Contact } from '../models';
+import { updateContact } from '../services/contacts';
 
 type FavoriteProps = {
   contact: Contact;

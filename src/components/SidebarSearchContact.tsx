@@ -1,5 +1,5 @@
 import { FormEvent } from 'react';
-import { createContact } from '../services/contacts.ts';
+import { createContact } from '../services/contacts';
 
 type Props = {
   query: string;
@@ -7,7 +7,7 @@ type Props = {
 };
 
 export default function SidebarSearchContact() {
-  const handleOnChangeEvent = async (e: FormEvent<HTMLInputElement>) => {};
+  const handleOnChangeEvent = async (e: FormEvent<HTMLInputElement>) => { };
 
   const handleOnSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

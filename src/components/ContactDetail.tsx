@@ -1,6 +1,6 @@
 import { FormEvent } from 'react';
-import { deleteContact } from '../services/contacts.ts';
-import Favorite from './Favorite.tsx';
+import { deleteContact } from '../services/contacts';
+import Favorite from './Favorite';
 
 export default function ContactDetail() {
   const contact: any = {}; // placeholder
